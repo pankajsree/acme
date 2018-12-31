@@ -1,0 +1,250 @@
+@import "variables";
+@import "mixin";
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 50vw;
+    background-image: url('../images/water.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.message {
+    position: absolute;
+    right: 10rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: $font-3;
+
+    .smaller {
+        font-size: 1.25rem;
+        text-transform: none;
+    }
+
+    a {
+        color: #fff;
+        font-size: 1.25rem;
+        padding: 0.5rem 1rem;
+        background-color: #000;
+        border: 1px solid #000;
+        transition: 0.3s;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px 1px #333;
+
+        &:hover {
+            text-decoration: none;
+            color: #000;
+            background-color: transparent;
+            box-shadow: 0 0 0 0 #333;
+        }
+    }
+}
+
+.banner-content {
+    position: relative;
+    width: 100%;
+    background-image: url('../images/texture-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 5rem 0;
+
+    .left {
+        text-transform: uppercase;
+        text-align: right;
+
+        .text-small {
+            font-size: 2rem;
+        }
+
+        .text-large {
+            font-size: 3rem;
+        }
+    }
+}
+
+/*****************************************************/
+
+#resource-activity {
+    .division {
+        position: relative;
+        min-height: calc(50% - 4rem);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .heading {
+        text-align: center;
+        color: #111;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        margin-top: 0.5rem;
+        padding: 0 0.8rem;
+
+        .b-b-black {
+            line-height: 2;
+        }
+    }
+
+    .text {
+        color: #111;
+        padding: 0 0.8rem;
+        margin-top: 1rem;
+        text-align: justify;
+    }
+
+    .stuff {
+        border: 0.15rem solid #ddd;
+        border-color: rgba(128, 0, 0, 0.5);
+        padding-bottom: 3rem;
+        height: 100%;
+    }
+
+    .show-more {
+        position: absolute;
+        right: 1rem;
+        bottom: 3rem;
+        margin: 0;
+        margin-top: 0.5rem;
+        margin-right: 0.8rem;
+
+        a {
+            color: #800000;
+        }
+
+        .underline {
+            background: #80000;
+        }
+    }
+
+}
+
+.show-more {
+    a {
+        position: relative;
+        display: inline-block;
+        font-weight: bold;
+        letter-spacing: 2px;
+
+        &:hover {
+            text-decoration: none;
+
+            .underline {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.underline {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background: #800000;
+    width: 0;
+    height: 1px;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+
+.section {
+    position: relative;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.line {
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background-color: #000;
+    left: 50%;
+    top: 1.7rem;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.section {
+    h2 {
+        position: relative;
+        display: inline-block;
+        background-color: #fff;
+        padding: 0.5rem 2.5rem;
+        z-index: 2;
+    }
+
+    .content {
+        padding-top: 2rem;
+
+        .details {
+            padding: 1rem 0 1.5rem 0;
+            font-size: 1.75rem;
+            letter-spacing: 2px;
+
+            .smaller {
+                display: block;
+                margin: 0 auto;
+                width: 60%;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+/********  CAROUSEL  ********/
+
+.carousel {
+    position: relative;
+    width: 100%;
+    text-align: right;
+
+    ul.carousel-indicators {
+        list-style: none;
+        position: absolute;
+        display: block;
+        left: 0;
+        right: auto;
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+        padding: 0 0.75rem;
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0.75);
+        z-index: 1;
+
+        li {
+            height: 0.9rem;
+            width: 0.9rem;
+            margin: 1rem 0;
+            border: 1px solid #000;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        li.active {
+            background-color: #000;
+        }
+    }
+
+    .img-container {
+        display: inline-block;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+/********  MAP  ********/
+
+#map {
+    height: 25rem;
+    margin-top: 2rem;
+}
